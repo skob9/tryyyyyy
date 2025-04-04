@@ -416,3 +416,78 @@ margin: 5px 0;
 #user-menu div:last-child {
 color: #ff7043;
 }
+
+/* MOBILE: 375×667 */
+/* ==================== */
+@media (max-width: 767px) {
+/* HEADER FIXES */
+header {
+    flex-direction: column;
+    padding: 12px 15px;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.nav-left {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 48px; /* Slightly smaller logo */
+}
+
+nav ul {
+    gap: 12px;
+}
+
+.search-container {
+    width: 100%;
+    margin: 8px 0;
+}
+
+.nav-right {
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    flex: 1; /* Equal width buttons */
+}
+
+/* FOOTER CENTERING */
+footer {
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.footer-content {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 60px; /* Adjusted logo size */
+}
+
+.footer-sections {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-section {
+    width: 100%;
+}
+
+.social-links {
+    justify-content: center;
+    margin-top: 15px;
+}
+}
