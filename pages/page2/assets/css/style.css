@@ -457,3 +457,202 @@ gap: 15px;
 color: #FB8143;
 font-size: 20px;
 }
+
+/* Mobile - 375 x 667 */
+@media (max-width: 767px) {
+/* Header adjustments */
+header {
+    flex-direction: column;
+    padding: 10px 15px;
+}
+
+.nav-left {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    height: 80px;
+}
+
+nav ul {
+    margin-left: 0;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    font-size: 16px;
+}
+
+.search-container {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.nav-right {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+/* Sign In/Sign Up adjustments */
+.main-content {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 0 15px;
+}
+
+.main-content .container {
+    min-height: 600px;
+}
+
+.main-content h1.title {
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.main-content button {
+    padding: 10px 40px;
+}
+
+.main-content button.ghost {
+    padding: 10px 40px;
+}
+
+/* Footer adjustments */
+.footer-content {
+    flex-direction: column;
+}
+
+.footer-sections {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+}
+
+/* Tablet - 1024 x 768 */
+@media (min-width: 768px) and (max-width: 1023px) {
+/* Improved header for tablet */
+header {
+    padding: 0 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 10px;
+}
+
+.nav-left {
+    width: auto;
+    flex: 1;
+}
+
+.logo img {
+    height: 90px;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    font-size: 18px;
+}
+
+.search-container {
+    width: 100%;
+    order: 3;
+    margin: 5px 0;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+/* Rest of tablet styles */  
+.main-content {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.footer-sections {
+    gap: 20px;
+}
+}
+
+/* Laptop - 1440 x 900 */
+@media (min-width: 1024px) and (max-width: 1439px) {
+.search-container {
+    width: 400px;
+}
+
+.main-content {
+    margin-top: 120px;
+    margin-bottom: 300px;
+}
+
+.main-content .container {
+    width: 750px;
+}
+}
+
+/* Full HD Desktop - 1920 x 1080 */
+@media (min-width: 1440px) {
+header {
+    padding: 0 50px;
+}
+
+.search-container {
+    width: 600px;
+}
+
+.main-content {
+    margin-top: 150px;
+    margin-bottom: 400px;
+}
+
+.main-content .container {
+    width: 800px;
+}
+}
+
+/* Fix for user menu on mobile */
+@media (max-width: 767px) {
+#user-menu {
+    right: 10px !important;
+    width: calc(100% - 20px) !important;
+    max-width: 300px !important;
+}
+}
+
+/* Adjustments for the sign-in/sign-up container on mobile */
+@media (max-width: 767px) {
+.main-content .form-container {
+    padding: 0 10px;
+}
+
+.main-content form {
+    padding: 0 20px;
+}
+
+.main-content .overlay-panel {
+    padding: 0 20px;
+}
+}
