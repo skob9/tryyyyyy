@@ -202,3 +202,266 @@ nav ul li a {
     font-size: 14px;
     color: #666;
 }
+
+/* Footer */
+footer {
+    background-color: #4B5320;
+    color: #FB8143;
+    padding: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    font-size: 18px;
+}
+
+.footer-logo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 0;
+}
+
+.footer-logo img {
+    height: 140px;
+}
+
+.footer-logo p {
+    margin: 0;
+    padding: 0;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.footer-sections {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.footer-section {
+    min-width: 150px;
+}
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.footer-links a {
+    color: #FB8143;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #FB8143;
+    font-size: 20px;
+}
+
+/* User Menu Styling */
+#user-menu {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+}
+
+#user-menu div {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#user-menu div:hover {
+    background-color: #f5f5f5;
+}
+
+#user-menu div:first-child {
+    font-weight: bold;
+}
+
+#user-menu div:nth-child(2) {
+    color: #666;
+}
+
+#user-menu hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 5px 0;
+}
+
+#user-menu div:last-child {
+    color: #ff7043;
+}
+
+/* Responsive Design */
+/* Mobile: 375 x 667 */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Add this line to center the logo */
+        flex: 1; /* Add this to take available space */
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    nav ul {
+        display: none; /* Hide nav menu on mobile */
+    }
+
+    .search-container {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .profile-image {
+        max-width: 200px;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-sections {
+        justify-content: center;
+    }
+
+    .footer-section {
+        min-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Tablet: 1024 x 768 */
+@media (min-width: 768px) and (max-width: 1199px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .logo img {
+        height: 100px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .search-container {
+        width: 400px;
+    }
+
+    .btn {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+
+    .profile-section {
+        padding: 30px;
+    }
+
+    .profile-image {
+        max-width: 250px;
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px;
+    }
+
+    .footer-logo img {
+        height: 120px;
+    }
+}
+
+/* Laptop: 1440 x 900 */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .search-container {
+        width: 500px;
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Full HD Desktop: 1920 x 1080 and above */
+@media (min-width: 1600px) {
+    /* Your existing styles work well for this size */
+    /* You can add any specific adjustments here if needed */
+}
