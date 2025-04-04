@@ -198,5 +198,5 @@ By the end of the week, all teams should deliver a core version of the web appli
 
 ## Notes
 Continuously communicate within and between teams to ensure alignment on design and functionality.
-Document any challenges faced during implementation for future reference.
+Document any challenges faced during implementation for future reference
 
