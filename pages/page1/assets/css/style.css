@@ -128,3 +128,92 @@ color: white;
 background-color: #fff;
 color: #4B5320;
 }
+
+/* Main content */
+.main-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    }
+    
+    .section {
+    margin-bottom: 60px;
+    text-align: center;
+    }
+    
+    h1, h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4d552a;
+    }
+    
+    h1 {
+    font-size: 36px;
+    }
+    
+    h2 {
+    font-size: 30px;
+    }
+    
+    .description {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-style: italic;
+    }
+    
+    /* Team section */
+    .team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    }
+    
+    .team-member {
+    width: 180px;
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    
+    .team-member img {
+    width: 180px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    }
+    
+    .team-member h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+    
+    .team-member p {
+    font-size: 12px;
+    color: #555;
+    }
+    
+    .about-box {
+    border: 1px solid #4d552a;
+    border-radius: 5px;
+    padding: 20px;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 40px;
+    }
+    
+    /* Mission and Vision */
+    .mission-vision {
+    margin-bottom: 15px;
+    }
+    
+    .mission-vision p {
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #4b5320;
+    }
+    
+    
