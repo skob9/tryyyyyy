@@ -124,3 +124,81 @@ nav ul li a {
     background-color: #fff;
     color: #4B5320;
 }
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 20px;
+}
+
+.profile-image {
+    max-width: 300px;
+}
+
+.profile-info h1 {
+    font-size: 28px;
+    color: #4d5729;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    display: flex;
+    align-items: center;
+    color: #666;
+}
+
+/* Tabs Section */
+.tabs {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    padding: 15px 30px;
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+    color: #666;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #666;
+}
