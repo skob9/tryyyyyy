@@ -438,6 +438,7 @@ margin: 5px 0;
 color: #ff7043;
 }
 
+
 /* Desktop Medium (1440x1000) */
 @media screen and (max-width: 1440px) {
 .container {
@@ -549,4 +550,371 @@ margin-bottom: 20px;
 justify-content: center;
 width: 100%;
 }
+}
+
+/* Reviews Section Styles */
+.reviews-section {
+    margin-top: 40px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+}
+
+.reviews-section h2 {
+    font-size: 22px;
+    color: #4B5320;
+    margin-bottom: 20px;
+}
+
+.review-stats {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avg-rating {
+    display: flex;
+    align-items: center;
+}
+
+.avg-rating span {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.stars {
+    display: flex;
+    margin-right: 10px;
+}
+
+.stars i {
+    color: #FB8143;
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+#review-count {
+    font-size: 16px;
+    color: #666;
+    font-weight: normal;
+}
+
+.review-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.review-form h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #4B5320;
+}
+
+.rating-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rating-input p {
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+.star-rating {
+    display: flex;
+    gap: 5px;
+}
+
+.star-btn {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.star-btn i {
+    color: #ccc;
+    transition: color 0.2s ease;
+}
+
+.star-btn i.fas {
+    color: #FB8143;
+}
+
+.star-btn:hover i {
+    color: #FB8143;
+}
+
+/* Apply gold color to all previous stars on hover */
+.star-btn:hover ~ .star-btn i {
+    color: #ccc;
+}
+
+.star-rating:hover .star-btn i {
+    color: #FB8143;
+}
+
+.star-rating:hover .star-btn:hover ~ .star-btn i {
+    color: #ccc;
+}
+
+#review-comment {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+}
+
+.review-btn {
+    background-color: #FB8143;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.review-btn:hover {
+    background-color: #e67339;
+}
+
+.reviews-list {
+    margin-top: 30px;
+}
+
+.review-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-weight: 600;
+    color: #333;
+}
+
+.review-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.review-rating {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.review-rating i {
+    color: #FB8143;
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.review-comment {
+    line-height: 1.5;
+    color: #555;
+}
+
+.no-reviews {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-style: italic;
+}
+
+/* Hide review form for non-logged in users */
+.review-form.hidden {
+    display: none;
+}
+
+/* Simple rating system styles */
+.simple-stars {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#rating-select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+#star-display {
+    display: flex;
+    gap: 5px;
+}
+
+#star-display i {
+    font-size: 24px;
+    color: #FB8143;
+}
+
+#star-display i.far {
+    color: #ccc;
+}
+
+.review-btn {
+    margin-top: 15px;
+    background-color: #FB8143;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.review-btn:hover {
+    background-color: #e67339;
+}
+
+#review-comment {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+}
+
+/* Review editing styles */
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-review-btn {
+    background-color: #4B5320;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.edit-review-btn:hover {
+    background-color: #5d6829;
+}
+
+.edit-review-form {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.edit-rating {
+    margin-bottom: 10px;
+}
+
+.edit-rating p {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.edit-stars {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-star {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.edit-comment-input {
+    width: 100%;
+    min-height: 80px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.save-edit-btn,
+.cancel-edit-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.save-edit-btn {
+    background-color: #4B5320;
+    color: white;
+}
+
+.save-edit-btn:hover {
+    background-color: #5d6829;
+}
+
+.cancel-edit-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.cancel-edit-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Add this to your CSS */
+.delete-review-btn {
+    background-color: #F44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 5px;
+}
+
+.delete-review-btn:hover {
+    background-color: #d32f2f;
+}
+
+.review-actions {
+    display: flex;
 }

@@ -45,10 +45,31 @@ function validateRegistration() {
     document.getElementById('registerEmail').value = '';
     document.getElementById('registerPassword').value = '';
 
-    alert('Registration successful! You can now sign in.');
-    togglePanel(); // Switch to the login panel
+    newUserDatabase(username,email,password);
 }
-
+async function newUserDatabase (username,email,password){
+    try {
+        const response = await fetch('https://demo-api-skills.vercel.app/api/DIYHomes/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: email,
+            name: username,
+            password: password
+          })
+        });
+  
+        const data = await response.json();
+        if (response.ok){
+            alert('Registration successful! You can now sign in.');
+            togglePanel();
+        }
+      } catch (error) {
+        console.error('Error creating user:', error);
+      }
+}
 // Function to validate login
 function validateLogin() {
     const email = document.getElementById('loginEmail').value;
@@ -59,18 +80,42 @@ function validateLogin() {
         return;
     }
     
-    const user = users.find(user => user.email === email && user.password === password);
-    
-    if (user) {
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        updateUIAfterLogin(user);
-        alert('Login successful! Welcome back, ' + user.username);
-        // Redirect to Home page after login
-        window.location.href = '../../index.html';
-    } else {
-        alert('Invalid email or password');
-    }
+    loginUserDatabase(email,password);
 }
+
+async function loginUserDatabase (email,password){
+    try {
+        const response = await fetch('https://demo-api-skills.vercel.app/api/DIYHomes/users/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password
+          })
+        });
+  
+        const data = await response.json();
+        if (response.ok){
+            const user = {};
+            user.email = data.user.email;
+            user.password = password;
+            user.id = data.user.id;
+            user.username = data.user.name;
+
+            localStorage.setItem('currentUser', JSON.stringify(user));
+
+            updateUIAfterLogin(user);
+            alert('Login successful! Welcome back, ' + user.username);
+            window.location.href = '../../index.html';
+        }
+      } catch (error) {
+        alert('Error logging user', error);
+      }
+}
+
+
 
 // Function to update UI after login
 function updateUIAfterLogin(user) {
@@ -140,7 +185,7 @@ function toggleUserMenu(user) {
 // Navigation functions for the user menu
 function navigateToProfile() {
     // Redirect to profile page (adjust URL as needed)
-    window.location.href = '../../../../pages/page5/index.html';
+    window.location.href = '../../pages/page5/index.html';
 }
 
 // Function to handle logout and restore header buttons

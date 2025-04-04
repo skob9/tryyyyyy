@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PinoyFix - Project Details</title>
-    <link rel="stylesheet" href="../page6/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <header>
         <div class="nav-left">
             <div class="logo">
-                <a href="../../index.html"><img src="../../assets/img/page6-logo.png" href="" alt="PinoyFix logo"></a>
+                <a href="../../index.html"><img src="../../assets/img/PinoyFix-logo.png" href="" alt="PinoyFix logo"></a>
             </div>
             <nav>
                 <ul>
@@ -61,6 +61,46 @@
                     <!-- Steps will be loaded here dynamically -->
                 </div>
 
+                <!-- Reviews Section -->
+                <div class="reviews-section">
+                    <h2>REVIEWS</h2>
+                    <div class="review-stats">
+                        <div class="avg-rating">
+                            <span id="avg-rating">0.0</span>
+                            <div class="stars">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span id="review-count">(0 reviews)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-form" id="review-form">
+                        <h3>Write a Review</h3>
+                        <div class="rating-input">
+                            <p>Your Rating:</p>
+                            <div class="star-rating">
+                                <span data-rating="1" class="star-btn" onclick="selectStar(1)"><i class="far fa-star"></i></span>
+                                <span data-rating="2" class="star-btn" onclick="selectStar(2)"><i class="far fa-star"></i></span>
+                                <span data-rating="3" class="star-btn" onclick="selectStar(3)"><i class="far fa-star"></i></span>
+                                <span data-rating="4" class="star-btn" onclick="selectStar(4)"><i class="far fa-star"></i></span>
+                                <span data-rating="5" class="star-btn" onclick="selectStar(5)"><i class="far fa-star"></i></span>
+                                <input type="hidden" id="selected-rating-value" value="0">
+                            </div>
+                        </div>
+                        <textarea id="review-comment" placeholder="Share your experience with this project"></textarea>
+                        <button id="submit-review" class="review-btn">Submit Review</button>
+                    </div>
+                    
+                    <div id="reviews-list" class="reviews-list">
+                        <!-- Reviews will be loaded here dynamically -->
+                        <p class="no-reviews">No reviews yet. Be the first to review!</p>
+                    </div>
+                </div>
+
                 <div class="comment-container">
                     <div class="comment-section">
                         <h3 class="comment-heading">Comment:</h3>
@@ -73,6 +113,7 @@
                         </div>
                     </div>
                 </div>
+            </article>
         </main>
     </div>
 
@@ -81,7 +122,7 @@
         <div class="footer-content">
             <!-- Left side: Logo -->
             <div class="footer-section footer-logo">
-                <img src="../../assets/img/page6-logo.png" alt="PinoyFix Logo">
+                <img src="../../assets/img/PinoyFix-logo.png" alt="PinoyFix Logo">
                 <p>©2025 PinoyFix, Inc.</p>
             </div>
             <!-- Right side: Categories, About Us, Find Us -->
@@ -113,6 +154,6 @@
             </div>
         </div>
     </footer>
-    <script src="../page6/assets/js/scripts.js"></script>
-    </body>
+    <script src="./assets/js/scripts.js"></script>
+</body>
 </html>

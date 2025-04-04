@@ -31,13 +31,12 @@ function toggleUserMenu(user) {
 // Navigation functions for the user menu
 function navigateToProfile() {
     // Adjust the destination as needed
-    window.location.href = '../../../../pages/page5/index.html';
+    window.location.href = '../../pages/page5/index.html';
 }
 
 function logout() {
     localStorage.removeItem('currentUser');
-    // Optionally, redirect to the login page
-    window.location.href = '../../../../index.html';
+    window.location.href = '././index.html';
 }
 
 // Function to update the header for a logged-in user
@@ -51,7 +50,7 @@ function updateHeaderForLoggedInUser(user) {
     postButton.textContent = 'Post';
     postButton.onclick = function() {
         // Navigate to your post creation page (adjust the URL as needed)
-        window.location.href = '../../../../pages/page4/index.html';
+        window.location.href = '../../pages/page4/index.html';
     };
 
     // Create user icon button with click event to toggle the user menu
