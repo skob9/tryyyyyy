@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PinoyFix</title>
+    <link rel="stylesheet" href="../page4/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-left">
+            <div class="logo">
+                <a href="../../index.html"><img src="../../assets/img/page4-logo.png" href="" alt="PinoyFix logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../page3/index.html">Projects</a></li>
+                    <li><a href="../page1/index.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="nav-right">
+            <a href="loginpage.html"><button class="btn btn-secondary">Sign In</button></a>
+            <a href="loginpage.html"><button class="btn btn-primary">Sign Up</button></a>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <div class="project-form-container">
+        <div class="form-header">
+            <h1>CREATE A NEW POST</h1>
+            <p class="subtitle">Share your DIY project with the community!</p>
+        </div>
+        
+        <div class="form-actions-top">
+            <button id="cancelBtn" class="btn btn-cancel">Cancel</button>
+            <button id="publishBtn" class="btn btn-publish">Publish</button>
+        </div>
+        
+        <div class="form-section">
+            <div class="form-group">
+                <label for="projectTitle">Project Title</label>
+                <textarea id="projectTitle" placeholder="What did you make?"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="category">Category</label>
+                <div class="select-wrapper">
+                    <select id="category">
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="renovation">Renovation</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="electrical-lighting">Electrical & Lighting</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <h3>Introduction</h3>
+            <textarea class="full-width" placeholder="List any tools or materials used. Link to sources as needed."></textarea>
+        </div>
+        
+        <div class="form-section">
+            <h3>Supplies</h3>
+            <textarea class="full-width" placeholder="List any tools or materials used. Link to sources as needed."></textarea>
+            
+            <div id="steps-container">
+                <div class="step-group" data-step="1">
+                    <h3 class="step-title">Step 1: <span class="step-title-edit" contenteditable="true">Enter Step Title</span></h3>
+                    <textarea class="full-width step-description" placeholder="Write a detailed description of this step."></textarea>
+                </div>
+                
+                <div class="step-group" data-step="2">
+                    <h3 class="step-title">Step 2: <span class="step-title-edit" contenteditable="true">Enter Step Title</span></h3>
+                    <textarea class="full-width step-description" placeholder="Write a detailed description of this step."></textarea>
+                </div>
+            </div>
+            
+            <div class="add-step-container">
+                <button id="addStepBtn" class="btn btn-add-step">Add a New Step +</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Left side: Logo -->
+            <div class="footer-section footer-logo">
+                <img src="../../assets/img/page4-logo.png" alt="PinoyFix Logo">
+                <p>©2025 PinoyFix, Inc.</p>
+            </div>
+            <!-- Right side: Categories, About Us, Find Us -->
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h4 class="footer-heading">Category</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Renovation</a></li>
+                        <li><a href="#">Furniture</a></li>
+                        <li><a href="#">Electrical & Lighting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">About Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Who We Are</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Find Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../page4/assets/js/scripts.js"></script>
+</body>
+</html>
