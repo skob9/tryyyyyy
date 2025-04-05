@@ -188,7 +188,7 @@ function createProjectCard(project, container) {
             }));
             
             // Navigate to the project details page
-            window.location.href = `../../page6/index.html?id=${project.id}`;
+            window.location.href = `../../pages/page6/index.html?id=${project.id}`;
         }
     });
     
