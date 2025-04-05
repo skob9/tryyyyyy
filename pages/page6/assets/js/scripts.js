@@ -740,7 +740,7 @@ function toggleUserMenu(user) {
 
 // Navigation functions for the user menu
 function navigateToProfile() {
-    window.location.href = '././././pages/page5/index.html';
+    window.location.href = '../../../pages/page5/index.html';
 }
 
 function logout() {
