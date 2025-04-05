@@ -745,7 +745,7 @@ function navigateToProfile() {
 
 function logout() {
     localStorage.removeItem('currentUser');
-    window.location.href = '../../../index.html';
+    window.location.href = '../../index.html';
 }
 
 // Function to add edit and delete buttons
