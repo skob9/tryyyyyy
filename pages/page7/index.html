@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PinoyFix - Admin Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../../assets/img/aboutus-PinoyFix-logo.png" alt="PinoyFix Logo">
+                <div class="logo-text">
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li id="dashboard-nav"><a href="#dashboard">Dashboard</a></li>
+                    <li id="permissions-nav" class="active"><a href="#permissions">Permissions</a></li>
+                    <li id="logout-nav"><a href="#logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <h2>Hello Admin!</h2>
+                <button class="admin-btn">ADMIN</button>
+            </div>
+            
+            <!-- Stats -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon user-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="stat-details">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">Total users</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon notification-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-details">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">Notifications</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon review-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <div class="stat-details">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">Pending review</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Panels -->
+            <div id="dashboard-panel" class="content-panel hidden">
+                <h3>User Management</h3>
+                
+                <div class="search-container">
+                    <input type="text" id="user-id-search" placeholder="Search by ID" min="1">
+                    <button id="search-btn">Search</button>
+                    <button id="reset-btn">Reset</button>
+                </div>
+                
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h4>No Users Yet</h4>
+                    <p>User data will appear here once users register to the system.</p>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Registered</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Empty table - no rows -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="permissions-panel" class="content-panel">
+                <h3>Permissions</h3>
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h4>No Permissions Set</h4>
+                    <p>Permission entries will appear here once roles and access levels are configured.</p>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Empty table - no rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>

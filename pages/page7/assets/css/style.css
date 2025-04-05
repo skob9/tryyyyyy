@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f9f6e8;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 220px;
+    background-color: #4b5320;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.logo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.logo-text {
+    text-align: center;
+}
+
+.logo span {
+    color: #fb8143;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: block;
+}
+
+.tagline {
+    font-size: 0.7rem;
+    color: #ddd;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    flex-grow: 1;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu li {
+    padding: 15px 20px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.nav-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu li.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-left: 4px solid #fb8143;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 0;
+    background-color: #f5f5dc;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header h2 {
+    color: #333;
+    font-weight: normal;
+}
+
+.admin-btn {
+    background-color: #fb8143;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.admin-btn:hover {
+    background-color: #4b5320;
+}
+
+/* Stats Styles */
+.stats-container {
+    display: flex;
+    padding: 20px 30px;
+    background-color: #f5f5dc;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 33.33%;
+    margin-right: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:last-child {
+    margin-right: 0;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.stat-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.user-icon {
+    background-color: #ff7f24;
+}
+
+.notification-icon {
+    background-color: #ff7f24;
+}
+
+.review-icon {
+    background-color: #ff7f24;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-label {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Content Panel Styles */
+.content-panel {
+    background-color: white;
+    border-radius: 8px;
+    margin: 0 30px 30px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-panel.hidden {
+    display: none;
+}
+
+.content-panel h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+/* Empty State Styles */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.empty-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.empty-icon svg {
+    width: 60px;
+    height: 60px;
+    color: #ccc;
+}
+
+.empty-state h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.empty-state p {
+    color: #888;
+    max-width: 400px;
+}
+
+/* Table Styles */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.data-table th {
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+    color: #555;
+}
+
+.data-table tr {
+    border-bottom: 1px solid #eee;
+}
+
+.data-table tr:last-child {
+    border-bottom: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+    }
+    
+    .stat-card {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.delete-btn svg {
+    stroke: white;
+}
+
+/* Add to your CSS file */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-container button {
+    background-color: #7b68ee;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #6a5acd;
+}
+
+#reset-btn {
+    background-color: #6c757d;
+}
+
+#reset-btn:hover {
+    background-color: #5a6268;
+}

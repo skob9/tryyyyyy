@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Publish button event
     publishBtn.addEventListener('click', function() {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
         // Collect form data
         const formData = {
             id: Date.now().toString(), // Generate a unique ID for the project
@@ -73,8 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             introduction: document.querySelector('.form-section:nth-child(3) textarea').value,
             supplies: document.querySelector('.form-section:nth-child(4) textarea').value,
             steps: [],
-            author: currentUser ? currentUser.username : 'Anonymous',
-            datePublished: new Date().toISOString()
+            author: currentUser ? currentUser.username : 'Anonymous'
         };
         
         // Collect all steps
@@ -90,6 +91,24 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
+        // Combine the fields into content
+        let stepsContent = '';
+        formData.steps.forEach(step => {
+            stepsContent += `Step ${step.number}: ${step.title}\n${step.description}\n\n`;
+        });
+
+        // Format the content string with proper line breaks for JSON
+        const content = `Introduction:
+        ${formData.introduction}
+
+        Supplies:
+        ${formData.supplies}
+
+        Steps:
+        ${stepsContent}
+
+        Author: ${formData.author}`.trim();
+        
         // Validate form data
         if (!formData.title.trim()) {
             alert('Please provide a project title');
@@ -103,6 +122,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Save the project to localStorage
         saveProject(formData);
+
+        // Now send this to the database
+        const userId = currentUser ? currentUser.id : 'Anonymous';
+        publishContentDatabase(formData.title, content, formData.category, userId);
         
         // Show success message
         alert('Project published successfully!');
@@ -121,6 +144,38 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Save back to localStorage
         localStorage.setItem('publishedProjects', JSON.stringify(projects));
+    }
+
+    async function publishContentDatabase(title, content, category, userId) {
+        try {
+            // required 
+        // {
+        //     "title": "DIY Wooden Table",
+        //     "content": "Step by step guide on making a wooden table.",
+        //     "category": "Woodworking",
+        //     "userId": "uuid"
+        //   }
+            const response = await fetch(`https://demo-api-skills.vercel.app/api/DIYHomes/posts`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    title: title,
+                    content: content,
+                    category: category,
+                    userId: userId
+                })
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                // Refresh the user list after successful deletion
+                alert('Project published successfully!');
+            }
+        } catch (error) {
+            alert('Error publishing content:' + error);
+        }
     }
     
     // Function to toggle the user menu
@@ -155,12 +210,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Navigation functions for the user menu
     window.navigateToProfile = function() {
-        window.location.href = '../../../../pages/page5/index.html';
+        window.location.href = '../../pages/page5/index.html';
     };
 
     window.logout = function() {
         localStorage.removeItem('currentUser');
-        window.location.href = '../../../../index.html';
+        window.location.href = '././index.html';
     };
 
     // Function to update the header for a logged-in user
