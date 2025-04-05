@@ -37,7 +37,7 @@ function navigateToProfile() {
 function logout() {
     localStorage.removeItem('currentUser');
     // Optionally, redirect to the login page
-    window.location.href = '././index.html';
+    window.location.href = '../../index.html';
 }
 
 // Function to update the header for a logged-in user
