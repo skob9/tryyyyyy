@@ -162,7 +162,6 @@ function createProjectCard(project, container) {
     
     projectCard.innerHTML = `
         <div class="project-image">
-            <img src="../../../../assets/img/PinoyFix-logo.png" alt="${project.title}">
         </div>
         <div class="project-info">
             <div class="title-row">
