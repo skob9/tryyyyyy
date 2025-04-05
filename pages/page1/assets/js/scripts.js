@@ -31,7 +31,7 @@ function toggleUserMenu(user) {
 // Navigation functions for the user menu
 function navigateToProfile() {
     // Adjust the destination as needed
-    window.location.href = '../../pages/page5/index.html';
+    window.location.href = '././pages/page5/index.html';
 }
 
 function logout() {
