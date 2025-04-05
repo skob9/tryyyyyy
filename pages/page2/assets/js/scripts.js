@@ -109,6 +109,8 @@ async function loginUserDatabase (email,password){
             updateUIAfterLogin(user);
             alert('Login successful! Welcome back, ' + user.username);
             window.location.href = '../../index.html';
+        } else {
+            alert("w")
         }
       } catch (error) {
         alert('Error logging user', error);
